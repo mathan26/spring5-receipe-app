@@ -5,6 +5,7 @@ import com.github.mathan26.spring5receipeapp.repositories.CategoryRepository;
 import com.github.mathan26.spring5receipeapp.repositories.RecipeRepository;
 import com.github.mathan26.spring5receipeapp.repositories.UnitOfMeasureRepository;
 import org.springframework.context.ApplicationListener;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Profile("default")
 @Component
 public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEvent> {
     private final CategoryRepository categoryRepository;
